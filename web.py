@@ -41,5 +41,3 @@ for i, todo in enumerate(todos):
         fuctions.write_todos(st.session_state['todos'])
         del st.session_state['todos']
         st.session_state['rerun'] = not st.session_state['rerun']  # Toggle the rerun flag
-
-st.session_state
