@@ -11,12 +11,13 @@ if 'rerun' not in st.session_state:
     st.session_state['rerun'] = False
 
 todos = st.session_state['todos']
-
+st.set_page_config(layout="wide")
 print(todos)
 
 st.title("My Todo App")
 st.subheader("This is my todo app")
-st.write("This app is to increase your productivity")
+st.write("This app is to increase your <b>productivity</b>",
+           unsafe_allow_html=True)
 
 
 # Define function to add a new todo
