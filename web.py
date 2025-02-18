@@ -36,11 +36,9 @@ st.text_input(label=" ", placeholder="add new todo...",
 # Display todos with checkboxes
 for i, todo in enumerate(todos):
     print(f"{i}-{todo}")
-    if st.checkbox(todo, key=f"todo_{i-1}"):
-        st.session_state['todos'].pop(i-1)
+    if st.checkbox(todo, key=f"todo_{i-2}"):
+        st.session_state['todos'].pop(i-2)
         fuctions.write_todos(st.session_state['todos'])
         st.session_state['rerun'] = not st.session_state['rerun']  # Toggle the rerun flag
 
-
-
-print("Hello")
+st.session_state
