@@ -41,5 +41,5 @@ for i, todo in enumerate(todos):
         st.session_state['todos'].pop(i)
         fuctions.write_todos(st.session_state['todos'])
         del st.session_state['todos']
-        st.write(f"{todo} is deleted successfully!")
         st.session_state['rerun'] = not st.session_state['rerun']  # Toggle the rerun flag
+        st.write(f"{todo} is deleted successfully!")
