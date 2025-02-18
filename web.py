@@ -25,7 +25,7 @@ def add_todo():
     todos.append(todo)
     fuctions.write_todos(todos)
     st.session_state['new_todo'] = ""  # Clear the input field after adding
-    st.write("Todos written to the file successfully!")
+    st.write("New task written to the file successfully!")
     st.session_state['rerun'] = not st.session_state['rerun']  # Toggle the rerun flag
 
 
